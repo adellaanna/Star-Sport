@@ -1,3 +1,4 @@
+
 import { bindings, defineConfig, defineWorker } from "cf/config";
 
 export default defineConfig({
@@ -13,6 +14,9 @@ export default defineConfig({
     },
     env: {
       ASSETS: bindings.assets(),
+      VINEXT_KV_CACHE: bindings.kv({
+        id: "420ea29afc22477db401af73ec0d4255",
+      }),
     },
   }),
 });
